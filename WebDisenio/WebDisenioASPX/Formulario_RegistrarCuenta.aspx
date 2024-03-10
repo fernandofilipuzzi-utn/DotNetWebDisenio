@@ -8,7 +8,7 @@
         <div class="col m-3 p-0">
 
             <div class="jumbotron mb-3">
-                <h3>Registrate </h3>
+                <h3>Formulario de Registro</h3>
             </div>
 
             <div class="alert alert-primary" role="alert" style="display: none;">

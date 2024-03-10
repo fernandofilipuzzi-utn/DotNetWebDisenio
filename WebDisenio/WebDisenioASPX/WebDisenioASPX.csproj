@@ -129,6 +129,7 @@
     <Content Include="img\banner-gente.jpg" />
     <Content Include="img\registro-1.jpg" />
     <Content Include="img\registro-2.jpg" />
+    <Content Include="Listado_Div.aspx" />
     <Content Include="Listado_Table.aspx" />
     <Content Include="Formulario_RegistrarCuenta.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -278,6 +279,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_Div.aspx.cs">
+      <DependentUpon>Listado_Div.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listado_Div.aspx.designer.cs">
+      <DependentUpon>Listado_Div.aspx</DependentUpon>
     </Compile>
     <Compile Include="Listado_Table.aspx.cs">
       <DependentUpon>Listado_Table.aspx</DependentUpon>

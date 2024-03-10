@@ -2,68 +2,168 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="container" style="background-color: #eaf0f5;">
+    <div class="container m-0 p-0">
 
-        <div class="form-group">
-            <label for="<%=tbEmail.ClientID%>" class="form-label col-12">Email</label>
-            <asp:TextBox ID="tbEmail" CssClass="form-control col-12" TextMode="Email" runat="server" />
-            <%--
-         <label for="tbEmail" class="form-label col-12">Email</label>
-         <input id="tbEmail" class="form-control col-12" type="email" />
-            --%>
-        </div>
+        <div class="col m-3 p-0">
 
-        <div class="form-group">
-            <label for="<%=tbText.ClientID%>" class="form-label col-12">Email</label>
-            <asp:TextBox ID="tbText" CssClass="form-control col-12" TextMode="SingleLine" runat="server" />
-            <%--
-            <label for="tbApellido" class="form-label col-12">Apellido</label>
-            <input id="tbApellido" class="form-control col-12" type="text" />
-            --%>
-        </div>
-
-        <div class="form-group">
-            <label for="tbNombre" class="form-label col-12">Nombre</label>
-            <asp:TextBox ID="tbNombre" class="form-control col-12" type="text" TextMode="SingleLine" runat="server" />
-            <%--
-            <label for="tbNombre" class="form-label col-12">Nombre</label>
-            <input id="tbNombre" class="form-control col-12" type="text" />
-            --%>
-        </div>
-
-        <div class="form-group">
-            <label for="tbNumeroDocumento" class="form-label col-12">DNI</label>
-            <input id="tbNumeroDocumento" class="form-control col-12" type="number" />
-        </div>
-
-        <div class="form-group">
-            <label for="<%=tbNumero.ClientID%>" class="form-label col-12">Número</label>
-            <asp:TextBox ID="tbNumero" CssClass="form-control col-12" Type="number" runat="server" />
-            <%--
-            <label for="tbNumero" class="form-label col-12">Número</label>
-            <input id="tbNumero" class="form-control col-12" type="number" />
-            --%>
-        </div>
-
-        <div class="form-group">
-            <label for="ddlLista" class="form-label col-12">Opciones</label>
-            <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" DataValueField="Id"
-                CssClass="form-control col-12" Type="select" runat="server" />
-            <%--
-            <div class="form-group">
-                <label for="ddlLista" class="form-label col-12">Opciones 1</label>
-                <select id="ddlLista" class="form-control-lg col-12" type="">
-                    <option value="1">Buggy</option>
-                    <option value="2">Cuatriciclo</option>
-                </select>
+            <div class="jumbotron m-b-3">
+                <h3>Formulario de Registro</h3>
             </div>
-            --%>
-        </div>
 
-        <div class="text-center m-3">
-            <asp:LinkButton ID="btnEnviar" CssClass="btn btn-primary" runat="server">Enviar <i class="fas fa-paper-plane"></i></asp:LinkButton>
-            <asp:LinkButton ID="btnCancelar" CssClass="btn btn-primary" runat="server">Cancelar <i class="fas fa-cancel"></i></asp:LinkButton>
+            <div class="col" style="background-color: #eaf0f5;">
+
+                <div class="alert alert-primary" role="alert" style="display: none;">
+                    <strong>Mostrando un alerta!</strong>.
+                </div>
+            
+                <div class="group-form col-12">
+                    <asp:Label for="<%=lbUsername.ClientID%>" CssClass="form-label col-12" runat="server">User Name</asp:Label>
+                    <asp:TextBox ID="lbUsername" CssClass="form-control col-12" type="text" name="username" runat="server" />
+                </div>
+
+                <%---
+                <div class="group-form">
+                    <label for="lbUsername">User Name</label>
+                    <input id="lbUsername" class="form-control" type="text" name="username">
+                </div>
+                --%>
+
+                <div class="group-form col-12">
+                    <label for="<%=lbPassword.ClientID%>" CssClass="form-label col-12">Password</label>
+                    <asp:TextBox ID="lbPassword" CssClass="form-control col-12" type="password" name="password" runat="server" />
+                </div>
+
+                <%---
+                <div class="group-form">
+                    <label for="lbPassword">Password</label>
+                    <input id="lbPassword" class="form-control" type="password" name="password">
+                </div>
+                --%>
+
+                <div class="form-group col-12">
+                    <label for="tbVehicles" class="form-label col-12">Vehicles</label>
+                    <div class="col">
+                        <div class="form-check">
+                            <asp:CheckBox ID="bike" name="vehicle" CssClass="form-check-input" value="Bike" runat="server" />
+                            <label class="form-check-label" for="<%=bike.ClientID%>">Bike</label>
+                        </div>
+                        <div class="form-check">
+                            <asp:CheckBox ID="car" name="vehicle" CssClass="form-check-input" value="Car" runat="server" />
+                            <label class="form-check-label" for="<%=car.ClientID%>">Car</label>
+                        </div>
+                    </div>
+                </div>
+
+                <%--
+                <div class="form-group">
+                    <label for="tbVehicles" class="form-label col-12">Vehicles</label>
+                    <div class="form-check">
+                        <input id="bike" type="checkbox" name="vehicle" class="form-check-input"
+                            value="Bike">
+                        <label class="form-check-label" for="bike">Bike</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="car" type="checkbox" name="vehicle" class="form-check-input"
+                            value="Car">
+                        <label class="form-check-label" for="car">Car</label>
+                    </div>
+                </div>
+                --%>
+
+                <div class="form-group col-12">
+                    <label for="tbSexo" class="form-label col-12">Sexo</label>
+                    <div class="col">
+                        <asp:RadioButtonList ID="gender" runat="server" CssClass="form-check">
+                            <asp:ListItem Text="Male" Value="male"></asp:ListItem>
+                            <asp:ListItem Text="Female" Value="female"></asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
+                </div>
+
+                <%---
+                <div class="form-group">
+                    <label for="tbSexo" class="form-label col-12">Sexo</label>
+                    <div class="form-check">
+                        <input type="radio" name="gender" id="male" class="form-check-input" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="gender" id="female" class="form-check-input" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                --%>
+
+                <div class="form-group">
+                    <label for="<%=tbBirthdate.ClientID%>" class="form-label">Birthdate</label>
+                    <asp:TextBox ID="tbBirthdate" CssClass="form-control" type="date" name="birthdate" runat="server" />
+                </div>
+                <%---
+                <div class="form-group">
+                    <label for="tbBirthdate" class="form-label">Birthdate</label>
+                    <input id="tbBirthdate" class="form-control" type="date" name="birthdate" />
+                </div>
+                --%>
+
+                <div class="group-form">
+                    <label for="fileToUpload" class="form-label">Elegir Archivo</label>
+                    <asp:FileUpload ID="fileToUpload" type="file" name="fileToUpload" runat="server" />
+                </div>
+                <%---
+                <div class="group-form">
+                    <label for="fileToUpload" class="form-label">Elegir Archivo</label>
+                    <input id="fileToUpload" type="file" name="fileToUpload" />
+                </div>
+                --%>
+
+                <div class="group-form">
+                    <label for="<%=email.ClientID%>" class="form-label">Email</label>
+                    <asp:TextBox ID="email" CssClass="form-control" type="email" name="email" runat="server" />
+                </div>
+                <%---
+                <div class="group-form">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" class="form-control" type="email" name="email">
+                </div>
+                --%>
+
+                <div class="group-form">
+                    <label for="<%=lbColor.ClientID%>"></label>
+                    <asp:TextBox ID="lbColor" TextMode="color" name="favcolor" runat="server"/>
+                </div>
+                <%---
+                <div class="group-form">
+                    <label for="lbColor"></label>
+                    <input id="lbColor" type="color" name="favcolor">
+                </div>
+                --%>
+
+                <div class="form-group">
+                    <label for="ddlLista" class="form-label col-12">Opciones 1</label>
+                    <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" DataValueField="Id" CssClass="form-control-lg col-12" runat="server"/>
+                </div>
+
+                <!--
+                <div class="form-group">
+                    <label for="ddlLista" class="form-label col-12">Opciones 1</label>
+                    <select id="ddlLista" class="form-control-lg col-12" type="">
+                        <option value="1">Buggy</option>
+                        <option value="2">Cuatriciclo</option>
+                    </select>
+                </div>            
+                -->
+
+                <div class="form-group">
+                    <label for="taTexto" class="form-label"></label>
+                    <textarea id="taTexto" class="form-control" name="message" rows="4" cols="50">Enter your message here.
+                    </textarea>
+                </div>
+
+                <div class="text-center m-3">
+                    <asp:LinkButton ID="btnEnviar" CssClass="btn btn-primary" runat="server">Enviar <i class="fas fa-paper-plane"></i></asp:LinkButton>
+                    <asp:LinkButton ID="btnCancelar" CssClass="btn btn-primary" runat="server">Cancelar <i class="fas fa-cancel"></i></asp:LinkButton>
+                </div>
+                </div>
         </div>
     </div>
-
 </asp:Content>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace WebDisenioASPX
 {
-    public partial class Listado_Table : System.Web.UI.Page
+    public partial class Listado_Div : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,6 +18,20 @@ namespace WebDisenioASPX
                 lv.DataBind();
             }
         }
+
+        protected void lv_ItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListViewItemType.DataItem)
+            {
+
+                Label lbColumna = e.Item.FindControl("lbColumna2") as Label;
+
+                string columna2 = DataBinder.Eval(e.Item.DataItem, "Columna2") as string;
+
+                lbColumna.Text = columna2;
+            }
+        }
+
 
         public DataSet BuscarPor()
         {
@@ -49,19 +62,6 @@ namespace WebDisenioASPX
             #endregion 
 
             return ds;
-        }
-
-        protected void lv_ItemDataBound(object sender, ListViewItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListViewItemType.DataItem)
-            {
-
-                Label lbColumna = e.Item.FindControl("lbColumna2") as Label;
-
-                string columna2 = DataBinder.Eval(e.Item.DataItem, "Columna2") as string;
-
-                lbColumna.Text = columna2;
-            }
         }
     }
 }
