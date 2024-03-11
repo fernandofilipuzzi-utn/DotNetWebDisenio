@@ -30,7 +30,7 @@
                                 <asp:Label Text='<%# Eval("Columna1") %>' runat="server" /></td>
                             <td>
                                 <div class="col-4">
-                                    <asp:Label Id="lbColumna2" runat="server"></asp:Label>
+                                    <asp:Literal Id="ltColumna2" runat="server"></asp:Literal>
                                 </div>
                             </td>
                             <td>

@@ -56,11 +56,16 @@ namespace WebDisenioASPX
             if (e.Item.ItemType == ListViewItemType.DataItem)
             {
 
-                Label lbColumna = e.Item.FindControl("lbColumna2") as Label;
+                Literal ltColumna2 = e.Item.FindControl("ltColumna2") as Literal;
 
                 string columna2 = DataBinder.Eval(e.Item.DataItem, "Columna2") as string;
 
-                lbColumna.Text = columna2;
+                ltColumna2.Text = $@"
+<div class='col-12'>
+    <div class='row'><b>{columna2}</b></div>
+    <div class='row'><div class='row'>Otra info</div></div>
+</div>
+";
             }
         }
     }

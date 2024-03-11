@@ -7,7 +7,51 @@
         <div class="col m-3 p-0">
 
             <div class="jumbotron m-b-3">
-                <h3>Formulario de Registro</h3>
+                 <h3>Formulario Estándar</h3>
+                <p class="lead">Ejemplo de uso de controles típicos</p>
+            </div>
+
+            <div class="container p-0 m-0">
+
+                <asp:Panel runat="server" Visible="false" ID="successAlert" class="alert alert-success alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="infoAlert" CssClass="alert alert-info alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="warningAlert" CssClass="alert alert-warning alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="dangerAlert" CssClass="alert alert-danger alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="primaryAlert" CssClass="alert alert-primary alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Primary!</strong> Indicates an important action.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="secondaryAlert" CssClass="alert alert-secondary alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Secondary!</strong> Indicates a slightly less important action.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="darkAlert" CssClass="alert alert-dark alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Dark!</strong> Dark grey alert.
+                </asp:Panel>
+
+                <asp:Panel runat="server" Visible="false" ID="lightAlert" CssClass="alert alert-light alert-dismissible show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Light!</strong> Light grey alert.
+                </asp:Panel>
             </div>
 
             <div class="col" style="background-color: #eaf0f5;">
@@ -15,9 +59,9 @@
                 <div class="alert alert-primary" role="alert" style="display: none;">
                     <strong>Mostrando un alerta!</strong>.
                 </div>
-            
-                <div class="group-form col-12">
-                    <asp:Label for="<%=lbUsername.ClientID%>" CssClass="form-label col-12" runat="server">User Name</asp:Label>
+
+                <div class="group-form col-12 p-3">
+                    <label for="<%=lbUsername.ClientID%>" CssClass="form-label col-12" runat="server">User Name</label>
                     <asp:TextBox ID="lbUsername" CssClass="form-control col-12" type="text" name="username" runat="server" />
                 </div>
 
@@ -28,8 +72,8 @@
                 </div>
                 --%>
 
-                <div class="group-form col-12">
-                    <label for="<%=lbPassword.ClientID%>" CssClass="form-label col-12">Password</label>
+                <div class="group-form col-12 p-3">
+                    <label for="<%=lbPassword.ClientID%>" cssclass="form-label col-12">Password</label>
                     <asp:TextBox ID="lbPassword" CssClass="form-control col-12" type="password" name="password" runat="server" />
                 </div>
 
@@ -40,7 +84,7 @@
                 </div>
                 --%>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12  p-3">
                     <label for="tbVehicles" class="form-label col-12">Vehicles</label>
                     <div class="col">
                         <div class="form-check">
@@ -70,7 +114,7 @@
                 </div>
                 --%>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12  p-3">
                     <label for="tbSexo" class="form-label col-12">Sexo</label>
                     <div class="col">
                         <asp:RadioButtonList ID="gender" runat="server" CssClass="form-check">
@@ -94,7 +138,7 @@
                 </div>
                 --%>
 
-                <div class="form-group">
+                <div class="form-group  p-3">
                     <label for="<%=tbBirthdate.ClientID%>" class="form-label">Birthdate</label>
                     <asp:TextBox ID="tbBirthdate" CssClass="form-control" type="date" name="birthdate" runat="server" />
                 </div>
@@ -105,7 +149,7 @@
                 </div>
                 --%>
 
-                <div class="group-form">
+                <div class="group-form p-3">
                     <label for="fileToUpload" class="form-label">Elegir Archivo</label>
                     <asp:FileUpload ID="fileToUpload" type="file" name="fileToUpload" runat="server" />
                 </div>
@@ -116,7 +160,7 @@
                 </div>
                 --%>
 
-                <div class="group-form">
+                <div class="group-form p-3">
                     <label for="<%=email.ClientID%>" class="form-label">Email</label>
                     <asp:TextBox ID="email" CssClass="form-control" type="email" name="email" runat="server" />
                 </div>
@@ -127,9 +171,9 @@
                 </div>
                 --%>
 
-                <div class="group-form">
+                <div class="group-form p-3">
                     <label for="<%=lbColor.ClientID%>"></label>
-                    <asp:TextBox ID="lbColor" TextMode="color" name="favcolor" runat="server"/>
+                    <asp:TextBox ID="lbColor" TextMode="color" name="favcolor" runat="server" />
                 </div>
                 <%---
                 <div class="group-form">
@@ -138,9 +182,9 @@
                 </div>
                 --%>
 
-                <div class="form-group">
+                <div class="form-group p-3">
                     <label for="ddlLista" class="form-label col-12">Opciones 1</label>
-                    <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" DataValueField="Id" CssClass="form-control-lg col-12" runat="server"/>
+                    <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" DataValueField="Id" CssClass="form-control-lg col-12" runat="server" />
                 </div>
 
                 <!--
@@ -153,17 +197,19 @@
                 </div>            
                 -->
 
-                <div class="form-group">
-                    <label for="taTexto" class="form-label"></label>
-                    <textarea id="taTexto" class="form-control" name="message" rows="4" cols="50">Enter your message here.
+                <div class="form-group p-3">
+                    <label for="taTexto" class="form-label">Comentarios:</label>
+                    <textarea id="taTexto" class="form-control col-12" name="message" rows="4" cols="50">Enter your message here.
                     </textarea>
                 </div>
 
                 <div class="text-center m-3">
                     <asp:LinkButton ID="btnEnviar" CssClass="btn btn-primary" runat="server">Enviar <i class="fas fa-paper-plane"></i></asp:LinkButton>
                     <asp:LinkButton ID="btnCancelar" CssClass="btn btn-primary" runat="server">Cancelar <i class="fas fa-cancel"></i></asp:LinkButton>
+                    <asp:LinkButton ID="btnShowAlert" OnClick="btnShowAlert_Click" CssClass="btn btn-primary" runat="server">ShowAlert <i class="fas fa-paper-plane"></i></asp:LinkButton>
                 </div>
-                </div>
+            </div>
+        
         </div>
     </div>
 </asp:Content>

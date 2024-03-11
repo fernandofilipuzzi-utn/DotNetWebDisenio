@@ -37,5 +37,10 @@ namespace WebDisenioASPX
 
             return dsLista;
         }
+
+        protected void btnShowAlert_Click(object sender, EventArgs e)
+        {
+            warningAlert.Visible = true;
+        }
     }
 }

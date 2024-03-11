@@ -7,7 +7,51 @@
         <div class="col m-3 p-0">
 
             <div class="jumbotron m-b-3">
-                <h3>Formulario de Registro</h3>
+                <h3>Formulario Estándar</h3>
+                <p class="lead">Ejemplo de uso de controles típicos</p>
+            </div>
+
+            <div class="container p-0 m-0">
+
+                <div id="successAlert" class="alert alert-success alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+                </div>
+
+                <div id="infoAlert" class="alert alert-info alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+                </div>
+
+                <div id="warningAlert" class="alert alert-warning alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                </div>
+
+                <div id="dangerAlert" class="alert alert-danger alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+                </div>
+
+                <div class="alert alert-primary alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Primary!</strong> Indicates an important action.
+                </div>
+
+                <div class="alert alert-secondary alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Secondary!</strong> Indicates a slightly less important action.
+                </div>
+
+                <div class="alert alert-dark alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Dark!</strong> Dark grey alert.
+                </div>
+
+                <div class="alert alert-light alert-dismissible fade" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Light!</strong> Light grey alert.
+                </div>
             </div>
 
             <div class="col" style="background-color: #eaf0f5;">
@@ -85,6 +129,7 @@
                 <div class="text-center m-3">
                     <asp:LinkButton ID="btnEnviar" CssClass="btn btn-primary" runat="server">Enviar <i class="fas fa-paper-plane"></i></asp:LinkButton>
                     <asp:LinkButton ID="btnCancelar" CssClass="btn btn-primary" runat="server">Cancelar <i class="fas fa-cancel"></i></asp:LinkButton>
+                    <asp:LinkButton ID="btnShowAlert" OnClick="btnShowAlert_Click" CssClass="btn btn-primary" runat="server">ShowAlert <i class="fas fa-paper-plane"></i></asp:LinkButton>
                 </div>
             </div>
         </div>
