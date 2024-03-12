@@ -61,31 +61,31 @@
                 </div>
 
                 <div class="group-form col-12 p-3">
-                    <label for="<%=lbUsername.ClientID%>" CssClass="form-label col-12" runat="server">User Name</label>
-                    <asp:TextBox ID="lbUsername" CssClass="form-control col-12" type="text" name="username" runat="server" />
+                    <label for="<%=tbUsername.ClientID%>" CssClass="form-label col-12" runat="server">User Name</label>
+                    <asp:TextBox ID="tbUsername" CssClass="form-control col-12" type="text" name="username" runat="server" />
                 </div>
 
                 <%---
                 <div class="group-form">
-                    <label for="lbUsername">User Name</label>
-                    <input id="lbUsername" class="form-control" type="text" name="username">
+                    <label for="tbUsername">User Name</label>
+                    <input id="tbUsername" class="form-control" type="text" name="username">
                 </div>
                 --%>
 
                 <div class="group-form col-12 p-3">
-                    <label for="<%=lbPassword.ClientID%>" cssclass="form-label col-12">Password</label>
-                    <asp:TextBox ID="lbPassword" CssClass="form-control col-12" type="password" name="password" runat="server" />
+                    <label for="<%=tbPassword.ClientID%>" cssclass="form-label col-12">Password</label>
+                    <asp:TextBox ID="tbPassword" CssClass="form-control col-12" type="password" name="password" runat="server" />
                 </div>
 
                 <%---
                 <div class="group-form">
-                    <label for="lbPassword">Password</label>
-                    <input id="lbPassword" class="form-control" type="password" name="password">
+                    <label for="tbPassword">Password</label>
+                    <input id="tbPassword" class="form-control" type="password" name="password">
                 </div>
                 --%>
 
                 <div class="form-group col-12  p-3">
-                    <label for="tbVehicles" class="form-label col-12">Vehicles</label>
+                    <label class="form-label col-12">Vehicles</label>
                     <div class="col">
                         <div class="form-check">
                             <asp:CheckBox ID="bike" name="vehicle" CssClass="form-check-input" value="Bike" runat="server" />
@@ -115,7 +115,7 @@
                 --%>
 
                 <div class="form-group col-12  p-3">
-                    <label for="tbSexo" class="form-label col-12">Sexo</label>
+                    <label for="gender" class="form-label col-12">Sexo</label>
                     <div class="col">
                         <asp:RadioButtonList ID="gender" runat="server" CssClass="form-check">
                             <asp:ListItem Text="Male" Value="male"></asp:ListItem>
@@ -161,19 +161,19 @@
                 --%>
 
                 <div class="group-form p-3">
-                    <label for="<%=email.ClientID%>" class="form-label">Email</label>
-                    <asp:TextBox ID="email" CssClass="form-control" type="email" name="email" runat="server" />
+                    <label for="<%=tbEmail.ClientID%>" class="form-label">Email</label>
+                    <asp:TextBox ID="tbEmail" CssClass="form-control" type="email" name="email" runat="server" />
                 </div>
                 <%---
                 <div class="group-form">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" class="form-control" type="email" name="email">
+                    <label for="tbEmail" class="form-label">Email</label>
+                    <input id="tbEmail" class="form-control" type="email" name="email">
                 </div>
                 --%>
 
                 <div class="group-form p-3">
-                    <label for="<%=lbColor.ClientID%>"></label>
-                    <asp:TextBox ID="lbColor" TextMode="color" name="favcolor" runat="server" />
+                    <label for="<%=tbColor.ClientID%>"></label>
+                    <asp:TextBox ID="tbColor" TextMode="color" name="favcolor" runat="server" />
                 </div>
                 <%---
                 <div class="group-form">
@@ -183,8 +183,8 @@
                 --%>
 
                 <div class="form-group p-3">
-                    <label for="ddlLista" class="form-label col-12">Opciones 1</label>
-                    <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" DataValueField="Id" CssClass="form-control-lg col-12" runat="server" />
+                    <label for="<%=ddlLista.ClientID%>" class="form-label col-12">Opciones 1</label>
+                    <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" OnDataBound="ddlLista_DataBound" OnTextChanged="ddlLista_TextChanged" DataValueField="Id" CssClass="form-control-lg col-12" runat="server" />
                 </div>
 
                 <!--
