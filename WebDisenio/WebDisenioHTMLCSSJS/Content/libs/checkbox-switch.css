@@ -2,7 +2,9 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-    height: 15px;
+    height: 20px;
+    width: 30px;
+    padding-top: 10px;
 }
 
 .switch::before {
