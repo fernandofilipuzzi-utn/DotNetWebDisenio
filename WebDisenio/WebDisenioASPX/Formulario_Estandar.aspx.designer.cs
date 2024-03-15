@@ -105,6 +105,15 @@ namespace WebDisenioASPX
         protected global::System.Web.UI.WebControls.TextBox lbPassword;
 
         /// <summary>
+        /// Control tbValor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbValor;
+
+        /// <summary>
         /// Control bike.
         /// </summary>
         /// <remarks>

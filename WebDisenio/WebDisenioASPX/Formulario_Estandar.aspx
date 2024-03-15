@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="group-form col-12 p-3">
-                    <label for="<%=lbUsername.ClientID%>" CssClass="form-label col-12" runat="server">User Name</label>
+                    <label for="<%=lbUsername.ClientID%>" CssClass="form-label col-12" runat="server">Nombre de usuario</label>
                     <asp:TextBox ID="lbUsername" CssClass="form-control col-12" type="text" name="username" runat="server" />
                 </div>
 
@@ -73,19 +73,31 @@
                 --%>
 
                 <div class="group-form col-12 p-3">
-                    <label for="<%=lbPassword.ClientID%>" cssclass="form-label col-12">Password</label>
+                    <label for="<%=lbPassword.ClientID%>" cssclass="form-label col-12">Clave</label>
                     <asp:TextBox ID="lbPassword" CssClass="form-control col-12" type="password" name="password" runat="server" />
                 </div>
 
-                <%---
-                <div class="group-form">
-                    <label for="lbPassword">Password</label>
-                    <input id="lbPassword" class="form-control" type="password" name="password">
+                 <%---
+                 <div class="group-form">
+                     <label for="lbPassword">Password</label>
+                     <input id="lbPassword" class="form-control" type="password" name="password">
+                 </div>
+                 --%>
+
+                <div class="group-form col-12 p-3">
+                    <label for="<%=tbValor.ClientID%>">Valor</label>
+                    <asp:TextBox ID="tbValor" class="form-control" type="number" step="any" name="tbValor" runat="server"/>
                 </div>
+
+                <%---
+               <div class="group-form">
+                   <label for="lbValor">Password</label>
+                   <input id="lbValor" class="form-control" type="number" step="any" name="password">
+               </div>
                 --%>
 
                 <div class="form-group col-12  p-3">
-                    <label for="tbVehicles" class="form-label col-12">Vehicles</label>
+                    <label for="tbVehicles" class="form-label col-12">Tipo de vehículo</label>
                     <div class="col">
                         <div class="form-check">
                             <asp:CheckBox ID="bike" name="vehicle" CssClass="form-check-input" value="Bike" runat="server" />
@@ -139,7 +151,7 @@
                 --%>
 
                 <div class="form-group  p-3">
-                    <label for="<%=tbBirthdate.ClientID%>" class="form-label">Birthdate</label>
+                    <label for="<%=tbBirthdate.ClientID%>" class="form-label">Fecha de nacimiento</label>
                     <asp:TextBox ID="tbBirthdate" CssClass="form-control" type="date" name="birthdate" runat="server" />
                 </div>
                 <%---
@@ -172,7 +184,7 @@
                 --%>
 
                 <div class="group-form p-3">
-                    <label for="<%=lbColor.ClientID%>"></label>
+                    <label for="<%=lbColor.ClientID%>">Seleccione un color</label>
                     <asp:TextBox ID="lbColor" TextMode="color" name="favcolor" runat="server" />
                 </div>
                 <%---
@@ -183,7 +195,7 @@
                 --%>
 
                 <div class="form-group p-3">
-                    <label for="ddlLista" class="form-label col-12">Opciones 1</label>
+                    <label for="ddlLista" class="form-label col-12">Opciones</label>
                     <asp:DropDownList ID="ddlLista" DataTextField="Descripcion" DataValueField="Id" CssClass="form-control-lg col-12" runat="server" />
                 </div>
 
@@ -199,7 +211,7 @@
 
                 <div class="form-group p-3">
                     <label for="taTexto" class="form-label">Comentarios:</label>
-                    <textarea id="taTexto" class="form-control col-12" name="message" rows="4" cols="50">Enter your message here.
+                    <textarea id="taTexto" class="form-control col-12" name="message" rows="4" cols="50">Entre un mensaje aquí.
                     </textarea>
                 </div>
 

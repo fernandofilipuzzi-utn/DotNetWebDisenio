@@ -57,13 +57,18 @@
             <div class="col" style="background-color: #eaf0f5;">
 
                 <div class="group-form">
-                    <label for="lbUsername">User Name</label>
+                    <label for="lbUsername">Nombre de usuario</label>
                     <input id="lbUsername" class="form-control" type="text" name="username">
                 </div>
 
                 <div class="group-form">
-                    <label for="lbPassword">Password</label>
+                    <label for="lbPassword">Clave</label>
                     <input id="lbPassword" class="form-control" type="password" name="password">
+                </div>
+
+                <div class="group-form">
+                    <label for="tbValor">Valor</label>
+                    <input id="tbValor" class="form-control" type="number" step="any">
                 </div>
 
                 <div class="form-group">
@@ -93,7 +98,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="tbBirthdate" class="form-label">Birthdate</label>
+                    <label for="tbBirthdate" class="form-label">Fecha de nacimiento</label>
                     <input id="tbBirthdate" class="form-control" type="date" name="birthdate" />
                 </div>
 
@@ -108,12 +113,12 @@
                 </div>
 
                 <div class="group-form">
-                    <label for="lbColor"></label>
+                    <label for="lbColor">Selección de un color</label>
                     <input id="lbColor" type="color" name="favcolor">
                 </div>
 
                 <div class="form-group">
-                    <label for="ddlLista" class="form-label col-12">Opciones 1</label>
+                    <label for="ddlLista" class="form-label col-12">Opciones</label>
                     <select id="ddlLista" class="form-control-lg col-12" type="">
                         <option value="1">Buggy</option>
                         <option value="2">Cuatriciclo</option>
@@ -121,9 +126,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="taTexto" class="form-label"></label>
-                    <textarea id="taTexto" class="form-control" name="message" rows="4" cols="50">Enter your message here.
-                </textarea>
+                    <label for="taTexto" class="form-label">Descripción</label>
+                    <textarea id="taTexto" class="form-control" name="message" rows="4" cols="50">Entra un texto aquí!</textarea>
                 </div>
 
                 <div class="text-center m-3">
