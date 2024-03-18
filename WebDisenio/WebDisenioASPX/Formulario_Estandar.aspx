@@ -204,7 +204,7 @@
                 </div>
 
                 <div class="text-center m-3">
-                    <asp:LinkButton ID="btnEnviar" CssClass="btn btn-primary" runat="server">Enviar <i class="fas fa-paper-plane"></i></asp:LinkButton>
+                    <asp:LinkButton ID="btnEnviar" OnClick="btnEnviar_Click" CssClass="btn btn-primary" runat="server">Enviar <i class="fas fa-paper-plane"></i></asp:LinkButton>
                     <asp:LinkButton ID="btnCancelar" CssClass="btn btn-primary" runat="server">Cancelar <i class="fas fa-cancel"></i></asp:LinkButton>
                     <asp:LinkButton ID="btnShowAlert" OnClick="btnShowAlert_Click" CssClass="btn btn-primary" runat="server">ShowAlert <i class="fas fa-paper-plane"></i></asp:LinkButton>
                 </div>
@@ -212,4 +212,6 @@
         
         </div>
     </div>
+
+  
 </asp:Content>

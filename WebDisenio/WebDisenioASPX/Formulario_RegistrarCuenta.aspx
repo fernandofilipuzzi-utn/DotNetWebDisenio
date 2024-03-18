@@ -23,6 +23,8 @@
 
                 <div class="col-md-6 col-12" style="background-color: #eaf0f5;">
 
+                    
+
                     <div class="form-group">
                         <label for="<%=tbEmail.ClientID%>" class="form-label col-12">Email</label>
                         <asp:TextBox ID="tbEmail" CssClass="form-control col-12" TextMode="Email" runat="server" />
@@ -81,5 +83,7 @@
             alerta.style = 'display: block;';
             alerta.className = "alert alert-success";
         }
+ 
+      
     </script>
 </asp:Content>

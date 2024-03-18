@@ -90,5 +90,10 @@ namespace WebDisenioASPX
                 }
             }
         }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            var valor=ddlLista.SelectedItem;
+        }
     }
 }
