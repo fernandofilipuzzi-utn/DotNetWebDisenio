@@ -130,6 +130,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Formulario_CustomControles.aspx" />
     <Content Include="Formulario_Estandar.aspx" />
+    <Content Include="Formulario_JavascriptEmbebido.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\registro-2.jpg" />
     <Content Include="img\registro-1.jpg" />
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="Formulario_Estandar.aspx.designer.cs">
       <DependentUpon>Formulario_Estandar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario_JavascriptEmbebido.aspx.cs">
+      <DependentUpon>Formulario_JavascriptEmbebido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario_JavascriptEmbebido.aspx.designer.cs">
+      <DependentUpon>Formulario_JavascriptEmbebido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

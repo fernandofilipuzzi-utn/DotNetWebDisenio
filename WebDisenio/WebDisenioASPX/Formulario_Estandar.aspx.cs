@@ -15,7 +15,7 @@ namespace WebDisenioASPX
             if (IsPostBack == false)
             {
                 ddlLista.DataSource = getValores().Tables[0];
-                ddlLista.DataBind();    
+                ddlLista.DataBind();
             }
         }
 
@@ -24,7 +24,7 @@ namespace WebDisenioASPX
             DataSet dsLista = new DataSet();
             DataTable dt = new DataTable();
 
-            dt.Columns.Add("Id",typeof(int));
+            dt.Columns.Add("Id", typeof(int));
             dt.Columns.Add("Descripcion", typeof(string));
             dt.Columns.Add("Id_Tipo", typeof(int));
             dt.Columns.Add("Requiere_Validacion", typeof(bool));
@@ -89,11 +89,6 @@ namespace WebDisenioASPX
                     tbUsername.Attributes["required"] = "false";
                 }
             }
-        }
-
-        protected void btnEnviar_Click(object sender, EventArgs e)
-        {
-            var valor=ddlLista.SelectedItem;
         }
     }
 }
